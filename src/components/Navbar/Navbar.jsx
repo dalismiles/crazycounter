@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import { CounterContext } from "../../App";
 
-const Navbar = () => {
-    const userValue = useContext(CounterContext);
-  
-    return (
-      <div className="Navbar">
-        <h2>Username: {userValue.state.userName}</h2>
-      </div>
-    );
-  };
+import "./index.css";
 
-  export default Navbar;
+const Navbar = () => {
+  const userValue = useContext(CounterContext);
+
+  return (
+    <div className="Navbar">
+      <h2>{userValue.state.userName}</h2>
+    </div>
+  );
+};
+
+export default Navbar;

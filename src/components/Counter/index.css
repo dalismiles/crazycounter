@@ -1,2 +1,42 @@
 .Counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+}
+
+.result {
+  font-size: 4rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.resetbutton {
+  background-color: rgb(79, 43, 83);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+
+.resetbutton:hover {
+  background-color: rgb(109, 65, 114);
+  cursor: pointer;
+}
+
+.mainbutton {
+  background-color: rgb(124, 4, 137);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.mainbutton:hover {
+  background-color: rgb(109, 65, 114);
+  cursor: pointer;
 }

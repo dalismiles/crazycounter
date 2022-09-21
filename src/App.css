@@ -1,2 +1,28 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background-color: rgb(212, 212, 212);
+  border: none;
+}
+
+.mainDescription {
+  color: rgb(124, 4, 137);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.egQuestion {
+  font-style: italic;
+}
+
+.image {
+  align-self: flex-end;
 }
