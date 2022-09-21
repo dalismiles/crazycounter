@@ -23,6 +23,18 @@ input {
   font-style: italic;
 }
 
-.image {
+.image{
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+img {
   align-self: flex-end;
+}
+
+a {
+  font-size: .6rem;
 }

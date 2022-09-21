@@ -66,6 +66,7 @@ function App() {
         </div>
         <div className="image">
           <img src={Wizard} alt="wizard-gif" />
+          <a href="https://www.behance.net/gallery/30490291/Wizard-Sticker-Set-for-Dropbox-Paper" target="_blank" >gif credits to: MarkusMagnusson </a>
         </div>
       </CounterContext.Provider>
     </div>
