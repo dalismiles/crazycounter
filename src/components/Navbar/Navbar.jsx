@@ -8,7 +8,9 @@ const Navbar = () => {
 
   return (
     <div className="Navbar">
-      <h2>{userValue.state.userName}</h2>
+      <h2>
+        {userValue.state.question}? {userValue.state.count}%
+      </h2>
     </div>
   );
 };

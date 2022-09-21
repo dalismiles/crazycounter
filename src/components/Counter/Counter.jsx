@@ -8,19 +8,19 @@ const Counter = () => {
 
   return (
     <div className="Counter">
-      <p className="result">{counterValue.state.count}%</p>
+      
       <div className="buttons">
+        <button
+          onClick={() => counterValue.dispatch({ type: "RANDOM" })}
+          className="mainbutton"
+        >
+          Get Your Answer Now
+        </button>
         <button
           onClick={() => counterValue.dispatch({ type: "RESET" })}
           className="resetbutton"
         >
           Reset
-        </button>
-        <button
-          onClick={() => counterValue.dispatch({ type: "RANDOM" })}
-          className="mainbutton"
-        >
-          Alakazam!
         </button>
       </div>
     </div>

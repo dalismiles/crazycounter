@@ -1,13 +1,9 @@
 .Counter {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 25rem;
-}
-
-.result {
-  font-size: 4rem;
+  padding: 3rem 0;
 }
 
 .buttons {
@@ -15,28 +11,29 @@
   gap: 0.5rem;
 }
 
-.resetbutton {
-  background-color: rgb(79, 43, 83);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
-}
-
-.resetbutton:hover {
-  background-color: rgb(109, 65, 114);
-  cursor: pointer;
-}
-
 .mainbutton {
+  color: ghostwhite;
   background-color: rgb(124, 4, 137);
-  color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.7rem;
   padding: 10px 20px;
 }
 
 .mainbutton:hover {
+  color: rgb(124, 4, 137);
+  background-color: rgb(247, 223, 7);
+  cursor: pointer;
+}
+
+.resetbutton {
+  background-color: rgb(185, 172, 187);
+  color: white;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.5rem 1rem;
+}
+
+.resetbutton:hover {
   background-color: rgb(109, 65, 114);
   cursor: pointer;
 }

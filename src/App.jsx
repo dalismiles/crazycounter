@@ -9,25 +9,21 @@ import "./App.css";
 
 const initialState = {
   count: "",
-  userName: "",
+  question: "",
 };
 
 export const CounterContext = createContext(initialState);
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "INCREMENT":
-      return { ...state, count: state.count + 1 };
-    case "DECREMENT":
-      return { ...state, count: state.count - 1 };
     case "RESET":
       return { ...state, count: 0 };
     case "RANDOM":
       return { ...state, count: Math.floor(Math.random() * 100) };
-    case "SET_USERNAME":
-      return { ...state, userName: action.payload };
+    case "SET_QUESTION":
+      return { ...state, question: action.payload };
     default:
-      return state;
+      return state || "";
   }
 };
 
@@ -38,11 +34,11 @@ function App() {
       <CounterContext.Provider value={{ state, dispatch }}>
         <Navbar />
         <div className="counter">
-          <Counter />
-
           <hr />
           <div>
-            <p className="description">Are you curious about your past?</p>
+            <p className="description">
+              Are you curious about something in your past?
+            </p>
             <p className="description">
               Do you wanna know how your future will be?
             </p>
@@ -51,22 +47,28 @@ function App() {
               <br /> the crazy seer!
             </p>
           </div>
+          <hr />
+          <p className="egQuestion">
+            e.g. does he love me? will I be rich? did she cheated on me?
+          </p>
           <input
             type="text"
-            value={state.userName}
+            value={state.question}
             onChange={(e) =>
-              dispatch({ type: "SET_USERNAME", payload: e.target.value })
+              dispatch({ type: "SET_QUESTION", payload: e.target.value })
             }
             placeholder="Your Question here..."
           />
-          <hr />
-          <p className="egQuestion">
-            e.g. does he love me? will I be happy? did she cheated on me?
-          </p>
+          <Counter />
         </div>
         <div className="image">
           <img src={Wizard} alt="wizard-gif" />
-          <a href="https://www.behance.net/gallery/30490291/Wizard-Sticker-Set-for-Dropbox-Paper" target="_blank" >gif credits to: MarkusMagnusson </a>
+          <a
+            href="https://www.behance.net/gallery/30490291/Wizard-Sticker-Set-for-Dropbox-Paper"
+            target="_blank"
+          >
+            gif credits to: MarkusMagnusson{" "}
+          </a>
         </div>
       </CounterContext.Provider>
     </div>
